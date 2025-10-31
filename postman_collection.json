@@ -1,0 +1,70 @@
+{
+  "info": {
+    "name": "Student Directory API",
+    "_postman_id": "auto-generated",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "List students",
+      "request": {
+        "method": "GET",
+        "url": "{{base_url}}/api/students"
+      }
+    },
+    {
+      "name": "Get student",
+      "request": {
+        "method": "GET",
+        "url": "{{base_url}}/api/students/1"
+      }
+    },
+    {
+      "name": "Create student",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"name\": \"Test\", \"age\": 20, \"group\": \"CS101\", \"email\": \"test@example.com\"}"
+        },
+        "url": "{{base_url}}/api/students"
+      }
+    },
+    {
+      "name": "Update student",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"name\": \"Updated Name\"}"
+        },
+        "url": "{{base_url}}/api/students/1"
+      }
+    },
+    {
+      "name": "Delete student",
+      "request": {
+        "method": "DELETE",
+        "url": "{{base_url}}/api/students/1"
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:8000"
+    }
+  ]
+}
